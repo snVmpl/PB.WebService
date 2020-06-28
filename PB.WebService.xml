@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PB.WebService</name>
+    </assembly>
+    <members>
+        <member name="T:PB.WebService.ActualResult">
+            <summary>
+            Content for requests
+            </summary>
+        </member>
+        <member name="M:PB.WebService.Controllers.ProductController.GetProduct(System.Int64)">
+            <summary>
+            Get product by id
+            </summary>
+            <param name="id"></param>
+            <returns>Product by id</returns>
+            <response code="200">Returns requested item</response>
+            <response code="400">If the id is null or incorrect, or item not found</response>
+        </member>
+        <member name="M:PB.WebService.Controllers.ProductController.CreateProduct(PB.Core.Dtos.ProductDto)">
+            <summary>
+            Create product
+            </summary>
+            <param name="product">Product to create</param>
+            <returns>A new created product</returns>
+            <response code="201">Returns the new created product</response>
+            <response code="400">If the item has errors</response>
+        </member>
+        <member name="T:PB.WebService.VersionRouteConvention">
+            <summary>
+            Set global prefix to all routes
+            </summary>
+        </member>
+        <member name="T:PB.WebService.Security.ClientIdAuthenticationHandler">
+            <summary>
+            Handler checks auth and parity of clientId
+            </summary>
+        </member>
+    </members>
+</doc>
